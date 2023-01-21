@@ -1,11 +1,11 @@
 package com.example.financecontrol
 
+import about_app.AboutApp
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity()
 {
@@ -14,18 +14,28 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val mAuth = FirebaseAuth.getInstance()
+        //startActivity(Intent(this, Login::class.java))
+    }
 
-        btn_registration.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+    // создаём меню приложения
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean
+    {
+        menuInflater.inflate(R.menu.layout_menu_main_activity, menu)
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    // действия при нажатии пунктов меню
+    override fun onOptionsItemSelected(item: MenuItem): Boolean
+    {
+        when (item.itemId) // нажали пункт меню
+        {
+            R.id.menu_1 -> startActivity(Intent(this, AboutApp::class.java))
+            R.id.menu_2 -> startActivity(Intent(this, AboutApp::class.java))
+            R.id.menu_3 -> startActivity(Intent(this, AboutApp::class.java))
+            R.id.about_app -> startActivity(Intent(this, AboutApp::class.java))
         }
 
-        btn_log_in.setOnClickListener {
-            mAuth.signInWithEmailAndPassword(et_e_mail.text.toString(), et_password.text.toString())
-                .addOnCompleteListener(OnCompleteListener {
-                    if (it.isSuccessful) startActivity(Intent(this, LoginOk::class.java))
-                    else tv_unregister.text = "Неверный ввод"
-                })
-        }
+        return super.onOptionsItemSelected(item)
     }
 }

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FinanceControl</string>
+    <string name="text_menu_about_app">О приложении</string>
+    <string name="text_logo">Financial Control</string>
+    <string name="text_menu_menu_1">Menu 1</string>
+    <string name="text_menu_menu_2">Menu 2</string>
+    <string name="text_menu_menu_3">Menu 3</string>
+    <string name="text_about_app">FinanceControl\nсохраняет историю финансовых операций в нескольких валютах. Позволяет конвертировать одну валюту в другую. А также, производить поиск в истории по введённой фразе.\nАвтор программы : Минин Д.В.\nДата создания : 14.01.2023\nВерсия приложения :</string>
 </resources>

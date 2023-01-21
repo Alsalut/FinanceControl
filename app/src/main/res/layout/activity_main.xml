@@ -7,58 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/et_password"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Пароль"
-        app:layout_constraintBottom_toTopOf="@+id/btn_registration"
-        app:layout_constraintEnd_toEndOf="@+id/btn_registration"
-        app:layout_constraintStart_toStartOf="@+id/btn_registration"
-        app:layout_constraintTop_toBottomOf="@+id/tv_unregister" />
-
-    <Button
-        android:id="@+id/btn_registration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange"
-        android:text="Зарегистрироваться"
-        app:layout_constraintBottom_toTopOf="@+id/btn_log_in"
-        app:layout_constraintEnd_toEndOf="@+id/btn_log_in"
-        app:layout_constraintStart_toStartOf="@+id/btn_log_in"
-        app:layout_constraintTop_toBottomOf="@+id/et_password" />
-
-    <Button
-        android:id="@+id/btn_log_in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/green"
-        android:text="Войти"
-        app:layout_constraintBottom_toTopOf="@+id/et_e_mail"
-        app:layout_constraintEnd_toEndOf="@+id/et_e_mail"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/et_e_mail"
-        app:layout_constraintTop_toBottomOf="@+id/btn_registration" />
-
-    <EditText
-        android:id="@+id/et_e_mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="e-mail"
-        android:inputType="textMultiLine"
+        android:text="MainActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_log_in" />
-
-    <TextView
-        android:id="@+id/tv_unregister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/et_password"
-        app:layout_constraintEnd_toEndOf="@+id/et_password"
-        app:layout_constraintStart_toStartOf="@+id/et_password"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_currency_exchange.*
+import kotlinx.android.synthetic.main.currency_exchange.*
 
 class CurrencyExchange : AppCompatActivity()
 {
@@ -13,7 +13,7 @@ class CurrencyExchange : AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_currency_exchange)
+        setContentView(R.layout.currency_exchange)
 
         etListener()
     }
